@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DigitalPlat-XLink</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    </head>
+  <body>
+    <!-- As a heading -->
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">DigitalPlat XLink Dashboard</span>
+    </div>
+  </nav>
+    <h1>Connect WIFI - DigitalPlat Dashboard</h1>
+
+<form action="/api/connectwifi/" method="get">
+  <div>
+  <label>SSID</label>
+  <input name="ssid" id="ssid" type="text" class="form-control" placeholder="SSID">
+</div>
+  </div>
+  <div>
+    <label>Password</label>
+    <input name="password" id="password" type="password" class="form-control" placeholder="Password">
+  </div>
+  <div>
+    <button class="btn btn-primary">Connect</button>
+  </div>
+</form>
+<a href="/api/connectwifi/apmodeonly" class="btn btn-info" role="button">Skip connecting to WIFI</a>
+<a href="/api/system/wifireset" class="btn btn-info" role="button">Delete WIFI configuration</a>
+
+<p>Skip connecting to WIFI will also create an AP network. You can connect to the AP network, and then control the API of the device, but in general, it will not skip connecting to WIFI</p>
+</div>
+</div>
+    <script src="/static/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

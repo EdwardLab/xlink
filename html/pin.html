@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DigitalPlat-XLink</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    </head>
+  <body>
+    <!-- As a heading -->
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">DigitalPlat XLink Dashboard</span>
+    </div>
+  </nav>
+    <h1>Control a pin - DigitalPlat Dashboard</h1>
+
+<form action="/api/pin/" method="get">
+  <div>
+  <label>PIN OUT or PIN IN [1 is IN 0 is OUT)</label>
+  <input name="outorin" id="outorin" type="text" class="form-control" placeholder="0">
+</div>
+  </div>
+  <div>
+    <label>PIN Value [1 or 0]</label>
+    <input name="value" id="value" type="text" class="form-control" placeholder="1">
+  </div>
+  <div>
+    <label>PIN Number</label>
+    <input name="gpionum" id="gpionum" type="text" class="form-control" placeholder="2 (board LED)">
+  </div>
+  <div>
+    <button class="btn btn-primary">RUN!</button>
+  </div>
+</form>
+</div>
+</div>
+    <script src="/static/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

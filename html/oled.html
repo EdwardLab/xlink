@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DigitalPlat-XLink</title>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    </head>
+  <body>
+    <!-- As a heading -->
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">DigitalPlat XLink Dashboard</span>
+    </div>
+  </nav>
+    <h1>Control OLED Screen - DigitalPlat Dashboard</h1>
+<p>1.The OLED screen must be initialized/cleared before setting the text</p>
+<a href="/api/oled/init" class="btn btn-info" role="button">Initialize OLED screen / clear content</a>
+<p>2.Here you can set the display typesetting to display multi-line text. For example, you can set your first row of text, and then set the X coordinate to 0 and the Y coordinate to 0, which will set your first row of characters starting from the first character in the first row. Return here after execution, and then set the text displayed in the second row again, and set the X coordinate to 5 and the Y coordinate to 20. After execution, the corresponding text will be set in the second row, and so on. After the setting is complete, click Show below to print out the text layout you set. Isn't it interesting?</p>
+<form action="/api/oled/settext/" method="get">
+  <div>
+  <label>The text you want to display (one line)</label>
+  <input name="text" id="text" type="text" class="form-control" placeholder="Set Text">
+</div>
+  </div>
+  <div>
+    <label>X-axis coordinate (displayed from the first character of this line, 0 is displayed from the first character of this line)</label>
+    <input name="setx" id="setx" type="text" class="form-control" placeholder="0">
+  </div>
+  <div>
+    <label>Y-axis coordinate (for example, if you want to display this row of text on the first row, please set it to 0, if you want to display it on the second row, then you should set it to 10, and so on, 20, 30, 40... )</label>
+    <input name="sety" id="sety" type="text" class="form-control" placeholder="0">
+  </div>
+  <div>
+    <button class="btn btn-primary">Set text layout</button>
+  </div>
+</form>
+<p>3.Well, the last step, click the Show button below to display the text layout you set!</p>
+<a href="/api/oled/show" class="btn btn-info" role="button">Show</a>
+</div>
+</div>
+    <script src="/static/bootstrap.bundle.min.js"></script>
+</body>
+</html>
