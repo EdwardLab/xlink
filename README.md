@@ -18,3 +18,6 @@ Follow us on Twitter to discover more: ```@digitalplatdev```
 * Espressif ESP32 
  
 XLink supports any device as long as it supports MicroPython
+# Open Source License
+* [MicroPython](https://micropython.org/)
+* [Microdot](https://microdot.readthedocs.io/en/latest/)
