@@ -109,13 +109,9 @@ except:
         makeap()
 import sys
 
-# 添加路径
 sys.path.append('examples')
 
 def is_legal_wifi(essid, password):
-    '''
-    判断WIFI密码是否合法
-    '''
     if len(essid) == 0 or len(password) == 0:
         return False
     return True
